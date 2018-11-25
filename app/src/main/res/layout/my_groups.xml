@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabBtn"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/gradient"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/newGroupScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="384dp">
+
+        <ImageView
+            android:id="@+id/imgGroup"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:src="@drawable/gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мои группы"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgGroup" />
+
+
+    </android.support.constraint.ConstraintLayout>
+ <android.support.v4.widget.SwipeRefreshLayout
+     android:id="@id/swipeContainer"
+     android:layout_below="@id/newGroupScreen"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below = "@+id/recyclerGroups"
+        android:id="@+id/recyclerGroups"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+ </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+
+</RelativeLayout>

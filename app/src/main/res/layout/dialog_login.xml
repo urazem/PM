@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/txtNameGroup"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Введите название групы"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    
+    <EditText
+        android:layout_marginTop="5dp"
+        android:inputType="text"
+        android:hint="Название группы"
+        android:ems="10"
+        android:id="@+id/inputNameGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:background="@drawable/buttonshape"
+        android:text="ОК"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorProjectTextWhite"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+</LinearLayout>

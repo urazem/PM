@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application colors: -->
+    <color name="colorPrimary">#5c316c</color>
+    <color name="colorPrimaryDark">#332845</color>
+    <color name="colorProjectWhite">#afffffff</color>
+    <color name="colorProjectTextWhite">#ffffff</color>
+    <color name="colorProjectTextDark">#463c55</color>
+    <color name="colorBackgroundDark">#32463c55</color>
+    <color name="colorBackgroundLight">#bfb8ca</color>
+    <!--<color name="colorAccent">#554a66</color>-->
+
+</resources>

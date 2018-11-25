@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_height="140dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="8dp"
+        android:id="@+id/placeImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/meetly_background"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="2dp" />
+
+
+
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="19dp"
+        android:text="Название встречи "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/placeImage"
+        android:layout_toRightOf="@+id/placeImage"
+        />
+
+    <TextView
+        android:id="@+id/placeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Описание встречи"
+        android:textSize="16sp"
+        android:layout_below="@+id/placeName"
+        android:layout_alignLeft="@+id/placeName"
+        android:layout_alignStart="@+id/placeName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/placeImage"
+        android:layout_alignLeft="@+id/placeImage"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimaryDark" />
+
+
+</RelativeLayout>

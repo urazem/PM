@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AuthorizationFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/logoScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher_background"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/projectLogo"
+            android:layout_width="400dp"
+            android:layout_height="800dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.27"
+            app:srcCompat="@drawable/meetly_project_logo2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/authorizationHeadScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+
+            android:id="@+id/headBackground"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/gradient"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/authorizationType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Авторизация"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/authorizationHelp"
+            app:layout_constraintEnd_toEndOf="@+id/headBackground"
+            app:layout_constraintStart_toStartOf="@+id/headBackground"
+            app:layout_constraintTop_toTopOf="@+id/headBackground" />
+
+        <TextView
+            android:id="@+id/authorizationHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="* для авторизации нужен номер телефона"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/headBackground"
+            app:layout_constraintEnd_toEndOf="@+id/headBackground"
+            app:layout_constraintStart_toStartOf="@+id/headBackground" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/authorizationScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="384dp">
+
+        <ImageView
+            android:id="@+id/footerBackgroundA"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorProjectWhite" />
+
+        <TextView
+            android:id="@+id/numberInputInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Номер телефона"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/numberInput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/numberInput"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:hint="+7"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/footerBackgroundA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberInputInfo" />
+
+        <Button
+            android:id="@+id/checkNumber"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A09C"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="55"
+            android:text="Далее"
+            android:textAllCaps="false"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/numberInput"
+            app:layout_constraintStart_toStartOf="@+id/numberInput"
+            app:layout_constraintTop_toBottomOf="@+id/numberInput" />
+
+        <TextView
+            android:id="@+id/checkNumberINfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="* за смс плата не взимается"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkNumber" />
+
+        <ProgressBar
+            android:id="@+id/authProgressBar"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:indeterminate="true"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkNumberINfo"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/codeInputScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="384dp">
+
+        <ImageView
+            android:id="@+id/footerBackgroundCI"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorProjectWhite" />
+
+        <TextView
+            android:id="@+id/codeInputInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Код подтверждения"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/codeInput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/codeInput"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/codeInputInfo" />
+
+        <Button
+            android:id="@+id/nextEvent"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A09C"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="55"
+            android:text="Регистрация"
+            android:textAllCaps="false"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/codeInput"
+            app:layout_constraintStart_toStartOf="@+id/codeInput"
+            app:layout_constraintTop_toBottomOf="@+id/codeInput" />
+
+        <TextView
+            android:id="@+id/nextEventInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Регистрируясь - вы соглашаетесь с правилами"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/nextEvent"
+            app:layout_constraintStart_toStartOf="@+id/nextEvent"
+            app:layout_constraintTop_toBottomOf="@+id/nextEvent" />
+
+        <ProgressBar
+            android:id="@+id/registerProgressBar"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:indeterminate="true"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextEventInfo"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/registrationAccountScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="384dp">
+
+        <ImageView
+            android:id="@+id/footerBackgroundR"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorProjectWhite" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintBottom_toBottomOf="@+id/surnameInput"
+            app:layout_constraintStart_toStartOf="@+id/footerBackgroundR"
+            app:layout_constraintTop_toTopOf="@+id/nameInputInfo" />
+
+        <TextView
+            android:id="@+id/nameInputInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Имя"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/nameInput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/footerBackgroundR"
+            app:layout_constraintStart_toEndOf="@+id/userIcon"
+            app:layout_constraintTop_toBottomOf="@+id/nameInputInfo" />
+
+        <TextView
+            android:id="@+id/surnameInputInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Фамилия"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/surnameInput"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+        <EditText
+            android:id="@+id/surnameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/colorProjectTextDark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userIcon"
+            app:layout_constraintTop_toBottomOf="@+id/surnameInputInfo" />
+
+
+        <Button
+            android:id="@+id/createAccount"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A09C"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="55"
+            android:text="Создать аккаунт"
+            android:textAllCaps="false"
+            android:textColor="@color/colorProjectTextWhite"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surnameInput" />
+
+        <ProgressBar
+            android:id="@+id/createAccProgressBar"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:indeterminate="true"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createAccount"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

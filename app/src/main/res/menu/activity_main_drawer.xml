@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Настройки" />
+        <item
+            android:id="@+id/nav_group"
+            android:icon="@drawable/ic_group"
+            android:title="Мои группы" />
+
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_friends"
+            android:title="Мои друзья" />
+
+        <item
+            android:id="@+id/nav_money"
+            android:icon="@drawable/ic_money"
+            android:title="Счет" />
+
+
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Поделиться" />
+
+    </group>
+
+    <item android:title="Другое">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="Помощь" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit_"
+                android:title="Выход" />
+        </menu>
+    </item>
+
+</menu>

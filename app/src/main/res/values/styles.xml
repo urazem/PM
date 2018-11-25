@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Application theme: -->
+    <style name="HandbookCalculateTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!--<item name="android:background">@drawable/meetly_background</item>-->
+    </style>
+
+</resources>
